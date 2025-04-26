@@ -12,7 +12,7 @@ function sumValues(num1, num2, add) {
         return result;
     }
     else {
-        return !add;
+        return false;
     }
 }
 
@@ -32,7 +32,7 @@ function discountPrices(prices, discount) {
 
     let discountedPrice = 0
     for(let i = 0; i < length; i++) {
-        discountedPrice += prices[i] * (1 - discount);
+        discountedPrice += parseInt(prices[i]) * (1 - parseFloat(discount));
         discounted.push(discountedPrice);
     }
 
