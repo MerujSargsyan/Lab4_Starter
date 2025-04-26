@@ -7,6 +7,10 @@
  */
 function sumValues(num1, num2, add) {
     if (add) {
+        if(typeof num1 !== 'number' || typeof num2 !== 'number') {
+            return false;
+        }
+
         let result = num1 + num2;
 
         return result;
@@ -30,9 +34,8 @@ function discountPrices(prices, discount) {
         return false;
     }
 
-    let discountedPrice = 0
     for(let i = 0; i < length; i++) {
-        discountedPrice += parseInt(prices[i]) * (1 - parseFloat(discount));
+        let discountedPrice = parseInt(prices[i]) * (1 - parseFloat(discount));
         discounted.push(discountedPrice);
     }
 
