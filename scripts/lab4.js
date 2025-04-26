@@ -31,12 +31,13 @@ function discountPrices(prices, discount) {
         return false;
     }
 
+    const length = prices.length;
+
     if(length === 0) {
         return false;
     }
 
     const discounted = []
-    const length = prices.length;
 
     for(let i = 0; i < length; i++) {
         let discountedPrice = parseFloat(prices[i]) * (1 - parseFloat(discount));
